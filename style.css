@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e0e2f2;
+}
+
+/* Navbar Section Start */
+.search-input{
+    width:0px;
+    padding: 5px 10px;
+    margin-right: -15px;
+    border-radius: 25px 0 0 25px;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    transition-duration: 1s;
+}
+
+.search-input.active{
+    width:200px;
+    visibility:visible;
+}
+
+.search-icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar Section End */
+
+/* Most Popular Slide Section Start */
+.carousel-item{
+    position: relative;
+}
+
+.shadow-layer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,rgba(0,0,0,0.3),rgba(0,0,0,0.1));
+    position: absolute;
+}
+
+.info-box{
+    position: absolute;
+    top: 50%;
+    left: 130px;
+    transform: translate(0,-50%);
+}
+
+.info-box > .name, .info-box > .season {
+    color: #fff;
+}
+
+.info-box > .name{
+    font-size: 3.5rem;
+}
+
+.info-box > .season{
+    font-size: 2rem;
+}
+
+.watch-now-btn,.see-more-btn{
+    margin-top: 10px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #ff6b8e;
+    border-radius: 10px;
+    background-color: #ff6b8e;
+    text-decoration: none;
+
+    display: inline-block;
+   
+}
+
+.watch-now-btn{
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.watch-now-btn:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.watch-now-btn i{
+    margin: 0 10px 0 0;
+}
+
+/* Most Popular Slide Section End */
+
+/* Movie and Series Session Start */
+.movies-box,.series-box{
+    flex-wrap: wrap;
+}
+
+.movie-item,.serie-item{
+    padding: 20px 0px 1px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background-color: #f8f9fa;
+}
+
+.movie-item p,.serie-item p{
+    margin-top: 8px;
+}
+
+.photo-box{
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+.photo-box img{
+    border-radius: 0 20px 0 20px;
+    height: 172px;
+}
+
+.star-box{
+    padding: 3px 5px;
+    /* border: 2px solid yellow; */
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    bottom:2px;
+    right:2px;
+}
+
+.star-box i{
+    margin-right: 2px;
+}
+
+.hover-play-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition-duration: 0.5s;
+}
+
+.hover-play-box i{
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.photo-box:hover > .hover-play-box{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.season-box{
+    position: absolute;
+    top: -4px;
+    left: 3px;
+}
+
+.season-box p{
+    width: 25px;
+    height: 25px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid rgb(192, 192, 192);
+    text-align: center;
+    font-size: 0.75em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see-more-box{
+    position: relative;
+    margin-top: 30px;
+}
+
+.see-more-btn{
+    padding: 10px 20px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-75%);
+    cursor: pointer;
+}
+
+.see-more-btn:hover{
+    color: #000;   
+}
+
+/* Pagination Section Start */
+.pagination-num,
+.pagination-button{
+  font-size: 1.1rem;
+  background-color: transparent;
+  border: none;
+  margin: 0.25rem 0.25rem;
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: .2rem;
+}
+
+.pagination-box{
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.pagination-num:hover,
+.pagination-button:not(.disabled):hover {
+  background: rgb(254, 139, 97);
+  border-radius: 50%;
+}
+
+.pagination-num.active {
+    color: #fff;
+    background: #0085b6;
+    border-radius: 50%;
+}
+
+/* Pagination Section End  */

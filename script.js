@@ -137,14 +137,17 @@ $(document).ready(()=>{
                     '</div>';
     
     let i=0;
-    while(i<12){
+    while(i<18){
         $(".movies-box").append(movieItem);
+       
         i++;
     }
+    $("#movies-page").children().attr('id','movie-pagination-item');
+    
 
     let counter=0;
     while(counter<seriesData.length){
-        $(".series-box").append('<div class="col-2" id="series-pagination-item">'+
+        $(".series-box").append('<div class="col-2">'+
         '<div class="serie-item">'+
             '<div class="photo-box">'+
                 '<img src="'+seriesData[counter].imgURL+'" width="100%" height="100%">'+
@@ -162,71 +165,8 @@ $(document).ready(()=>{
     '</div>');
         counter++
     }
-
-    // Pagination Section Start
-    let itemSeries = document.querySelectorAll('#series-pagination-item');
-    let itemCount = $('#paginated-list').children().length;
-    let currentPage;
-    let itemEachPage = 6;
-    let pageCount = Math.ceil(itemCount/itemEachPage);
-
-    for(let page=0;page<pageCount;page++){
-        if(page===0){
-            $('#pagination-num').append("<button class='pagination-num active'>"+(page+1)+"</button>");
-        }else{
-            $('#pagination-num').append("<button class='pagination-num'>"+(page+1)+"</button>")
-        }
-    
-    }
-
-    const setCurrentPage = (pageNum) => {
-        currentPage = pageNum;
-         
-        const prevRange = (pageNum - 1) * itemEachPage;
-        const currRange = pageNum * itemEachPage;
-       
-        itemSeries.forEach((item, index) => {
-          $(item).hide();
-          if (index >= prevRange && index < currRange) {
-            $(item).show();
-          }
-        });
-
-        
-
-        currentPage===1 ? $('#prev-button').hide() : $('#prev-button').show();
-        
-        currentPage===pageCount ? $('#next-button').hide() : $('#next-button').show();
-    };
-
-    setCurrentPage(1);
-
-    let pagiNumButton = document.querySelectorAll('.pagination-num');
-    $(pagiNumButton).click((e)=>{
-        let pageNum = e.target.innerText;
-        setCurrentPage(parseInt(pageNum));
-        pagiNumButton.forEach((button)=>{
-            $(button).removeClass('active');
-        })
-        $(e.target).addClass('active');
-
-    })
-    
-    $('#prev-button').click(()=>{
-        $(pagiNumButton[currentPage-1]).removeClass('active');
-        setCurrentPage(currentPage-1);
-        $(pagiNumButton[currentPage-1]).addClass('active');
-        
-    })
-
-    $('#next-button').click(()=>{
-        $(pagiNumButton[currentPage-1]).removeClass('active');
-        setCurrentPage(currentPage+1);
-        $(pagiNumButton[currentPage-1]).addClass('active');
-    })
-   
+    $("#series-page").children().attr('id','serie-pagination-item');
 
     
 
 });
-

@@ -231,3 +231,9 @@ body{
 }
 
 /* Pagination Section End  */
+
+/* From showmovie file */
+.info-text{
+    margin:0px;
+    margin-top: 10px;
+}

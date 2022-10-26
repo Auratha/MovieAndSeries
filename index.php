@@ -4,44 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Movieandseries</title>
-        <!-- fontawesome css1  -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- bootstrap css1 js1 -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <!-- jquery js1 -->
-        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <?php include('link.php') ?>
     </head>
     <body>
         
-        <!-- Navbar Section Start -->
-        <nav class="navbar navbar-expand-md bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand ms-5" href="#"><img src="img/logo.png" alt="website logo" width="120px" height="40px"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto ms-5 mb-2 mb-lg-0">
-                  <li class="nav-item mx-3">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item mx-3">
-                    <a class="nav-link" href="#">Series</a>
-                  </li>
-                  <li class="nav-item mx-3">
-                    <a class="nav-link" href="#">Movies</a>
-                  </li> 
-                </ul>
-                <form class="d-flex align-items-center me-5" role="search">
-                  <input type="text" class="search-input" placeholder="Search...">
-                  <i class="fa-sharp fa-solid fa-magnifying-glass search-icon"></i>
-                </form>
-              </div>
-            </div>
-        </nav>
-        <!-- Navbar Section End -->
+        <!-- Calling Navbar HERE -->
+        <?php include('navbar.php') ?>
 
         <!-- Most Popular Slide Section Start -->
         <div class="container-fluid">

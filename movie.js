@@ -8,7 +8,7 @@
     let itemtype = itemType;
     let itemCount = itemCountForWho;
     let currentPage;
-    let itemEachPage = 6;
+    let itemEachPage = 24;
     let pageCount = Math.ceil(itemCount/itemEachPage);
 
     for(let page=0;page<pageCount;page++){

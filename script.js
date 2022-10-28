@@ -120,28 +120,7 @@ $(document).ready(()=>{
 
 // Movie And Series Session Start
 $(document).ready(()=>{
-    let movieItem = '<div class="col-2">'+
-                        '<div class="movie-item">'+
-                            '<div class="photo-box">'+
-                                '<img src="https://m.media-amazon.com/images/I/71niXI3lxlL.jpg" width="100%" height="100%">'+
-                                '<div class="star-box">'+
-                                '<i class="fa-solid fa-star text-warning"></i>'+
-                                '<span>5.9</span>'+
-                            '</div>'+
-                            '<div class="hover-play-box">'+
-                                '<i class="fa-regular fa-circle-play"></i>'+
-                            '</div>'+
-                            '</div>'+
-                            '<p class="text-center">Avengers:End Game</p>'+
-                        '</div>'+
-                    '</div>';
     
-    let i=0;
-    while(i<18){
-        $(".movies-box").append(movieItem);
-       
-        i++;
-    }
     $("#movies-page").children().attr('id','movie-pagination-item');
     
 

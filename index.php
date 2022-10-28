@@ -1,3 +1,6 @@
+<?php
+    include('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,7 +27,7 @@
                                 <p class="season">Season 1</p>
                                 <a class="watch-now-btn"><i class="fa-solid fa-circle-play"></i>Watch Now</a>
                             </div>
-                            <img src="https://images.wallpapersden.com/image/download/lupin-hd-netflix_bWVrZWaUmZqaraWkpJRmbmdlrWZlbWU.jpg" class="d-block w-100" alt="...">
+                            <img src="https://filmdaily.co/wp-content/uploads/2021/01/lupin-lede.jpg" class="d-block w-100" alt="...">
                           </div>
                           <div class="carousel-item" data-bs-interval=3000>
                             <div class="shadow-layer"></div>
@@ -63,6 +66,31 @@
         <div class="container my-5">
             <h1>Movies</h1>
                 <div class="row movies-box">
+                    <?php
+                        $moviesql = "SELECT * FROM movie_card_info LIMIT 18";
+                        $moviequery = mysqli_query($conn,$moviesql);
+                        while($movie = mysqli_fetch_assoc($moviequery)){ 
+                    ?>
+                        <div class="col-2">
+                        <a href="./movie/showmovie.html" style="text-decoration:none; color:#000">
+                            <div class="movie-item">
+                                <div class="photo-box">
+                                    <img src="<?php echo $movie['movie_img'] ?>" width="100%" height="100%">
+                                    <div class="star-box">
+                                        <i class="fa-solid fa-star text-warning"></i>
+                                        <span><?php echo $movie['movie_rating']?></span>
+                                    </div>
+                                    <div class="hover-play-box">
+                                        <i class="fa-regular fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <p class="text-center"><?php echo substr($movie['movie_name'],0,15)."..." ?></p>
+                            </div>
+                        </a>
+                        </div>
+                    <?php
+                        }
+                    ?>
                     <!-- <div class="col-2">
                         <div class="movie-item">
                         <div class="photo-box">
@@ -82,7 +110,7 @@
                 </div>
                 <div class="see-more-box">
                     <hr>
-                    <a class="see-more-btn">See More</a>
+                    <a href="./movies.php" class="see-more-btn">See More</a>
                 </div>
                 
         </div>

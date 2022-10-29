@@ -116,6 +116,20 @@ $(document).ready(()=>{
     $('.search-icon').click(()=>{
         $('.search-input').toggleClass('active');
     })
+
+    let headers = document.querySelectorAll('.nav-link');
+
+    switch($('#filename').val()){
+        case 'index.php':
+        headers[0].classList.add('active');;
+        break;
+        case 'movies.php':
+        headers[1].classList.add('active');;
+        break;
+        case 'series.php':
+        headers[2].classList.add('active');;
+        break;
+    }
 })
 
 // Movie And Series Session Start

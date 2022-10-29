@@ -1,3 +1,5 @@
+<input type="hidden" id='filename' value="<?php echo basename($_SERVER['PHP_SELF']) ?>">
+
 <!-- Navbar Section Start -->
 <nav class="navbar navbar-expand-md bg-light">
             <div class="container-fluid">
@@ -8,13 +10,13 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto ms-5 mb-2 mb-lg-0">
                   <li class="nav-item mx-3">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
                   </li>
                   <li class="nav-item mx-3">
-                    <a class="nav-link" href="#">Series</a>
+                    <a class="nav-link" href="movies.php">Movies</a>
                   </li>
                   <li class="nav-item mx-3">
-                    <a class="nav-link" href="#">Movies</a>
+                    <a class="nav-link" href="series.php">Series</a>
                   </li> 
                 </ul>
                 <form class="d-flex align-items-center me-5" role="search">

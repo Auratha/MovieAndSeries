@@ -72,7 +72,7 @@
                         while($movie = mysqli_fetch_assoc($moviequery)){ 
                     ?>
                         <div class="col-2">
-                        <a href="./movie/showmovie.php?id=<?php echo $movie['id'] ?>" style="text-decoration:none; color:#000">
+                        <a href="./showmovie.php?id=<?php echo $movie['id'] ?>" style="text-decoration:none; color:#000">
                             <div class="movie-item">
                                 <div class="photo-box">
                                     <img src="<?php echo $movie['movie_img'] ?>" width="100%" height="100%">

@@ -26,7 +26,7 @@ include('db.php');
             $moviequery = mysqli_query($conn, $moviesql);
             while ($movie = mysqli_fetch_assoc($moviequery)) {
             ?>
-                <div class="col-2">
+                <div class="col-2" title="<?php echo $movie['movie_name'] ?>">
                     <a href="./showmovie.html" style="text-decoration:none; color:#000">
                     <div class="movie-item">
                         <div class="photo-box">
